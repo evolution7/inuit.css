@@ -40,9 +40,21 @@
  * Grid wrapper
  */
 .grid{
-    margin-left:-$base-spacing-unit;
     list-style:none;
-    margin-bottom:0;
+    margin:0;
+    padding:0;
+    margin-left:-$base-spacing-unit;
+    @if not $use-markup-fix {
+        letter-spacing:-0.31em;
+    }
+}
+
+@if not $use-markup-fix {
+    /* Opera hack */
+    .opera:-o-prefocus,
+    .grid {
+        word-spacing:-0.43em;
+    }
 }
 
 
@@ -59,11 +71,15 @@
      */
     .grid__item{
         display:inline-block;
-        width:100%;
         padding-left:$base-spacing-unit;
         vertical-align:top;
-        @if $global-border-box == false{
-            @include vendor(box-sizing, border-box);
+        @if $mobile-first {
+            width:100%;
+        }
+        box-sizing:border-box;
+        @if not $use-markup-fix {
+            letter-spacing:normal;
+            word-spacing:normal;
         }
     }
 
@@ -144,10 +160,10 @@
  * Create grids with narrower gutters. Extends `.grid`.
  */
 .grid--narrow{
-    margin-left:-($gutter / 2);
+    margin-left:-($base-spacing-unit / 2);
 
     > .grid__item{
-        padding-left:$gutter / 2;
+        padding-left:$base-spacing-unit / 2;
     }
 }
 
@@ -156,10 +172,10 @@
  * Create grids with wider gutters. Extends `.grid`.
  */
 .grid--wide{
-    margin-left:-($gutter * 2);
+    margin-left:-($base-spacing-unit * 2);
 
     > .grid__item{
-        padding-left:$gutter * 2;
+        padding-left:$base-spacing-unit * 2;
     }
 }
 
