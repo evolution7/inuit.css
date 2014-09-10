@@ -183,13 +183,12 @@
 .visuallyhidden{
     @include accessibility;
 }
-@if $responsive{
-    @each $breakpoint in $breakpoints {
-        @include grid-media-query(#{nth($breakpoint, 1)}){
-            .accessibility--#{nth($breakpoint, 1)},
-            .visuallyhidden--#{nth($breakpoint, 1)}{
-                @include accessibility;
-            }
+
+@each $breakpoint in $breakpoints {
+    @include media-query(#{nth($breakpoint, 1)}){
+        .accessibility--#{nth($breakpoint, 1)},
+        .visuallyhidden--#{nth($breakpoint, 1)}{
+            @include accessibility;
         }
     }
 }

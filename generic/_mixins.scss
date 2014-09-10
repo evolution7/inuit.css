@@ -282,7 +282,7 @@
  *
  * We work out your end points for you:
  */
-@mixin grid-media-query($media-query) {
+@mixin media-query($media-query) {
     $breakpoint-found: false;
 
     @each $breakpoint in $breakpoints {

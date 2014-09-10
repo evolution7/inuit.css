@@ -8,8 +8,6 @@
 
 
 
-
-
 /*------------------------------------*\
     $DEBUG
 \*------------------------------------*/
@@ -18,21 +16,6 @@
  * in the browser. Set to `true` or `false`.
  */
 $debug-mode:        false!default;
-
-
-
-
-
-/*------------------------------------*\
-    $BORDER-BOX
-\*------------------------------------*/
-/**
- * Do you want all elements to adopt `box-sizing:border-box;` as per
- * paulirish.com/2012/box-sizing-border-box-ftw ?
- */
-$global-border-box: true!default;
-
-
 
 
 
@@ -57,45 +40,9 @@ $base-ui-color:     #ccc!default;
 
 
 
-
-
 /*------------------------------------*\
     $RESPONSIVE
 \*------------------------------------*/
-/**
- * Responsiveness?
- */
-$responsive:        true!default;
-
-/**
- * Is this build mobile first? Setting to ‘true’ means that all grids will be
- * 100% width if you do not apply a more specific class to them.
- */
-$mobile-first:          true !default;
-
-/**
- * Responsive push and pull produce a LOT of code, only turn them on if you
- * definitely need them.
- */
-$push:              false!default;
-/**
- * Note: `$push` variable above must be set to true before enabling these.
- */
-$palm-push:         false!default;
-$lap-push:          false!default;
-$lap-and-up-push:   false!default;
-$portable-push:     false!default;
-$desk-push:         false!default;
-
-$pull:              false!default;
-/**
- * Note: `$pull` variable above must be set to true before enabling these.
- */
-$palm-pull:         false!default;
-$lap-pull:          false!default;
-$lap-and-up-pull:   false!default;
-$portable-pull:     false!default;
-$desk-pull:         false!default;
 
 /**
  * Using `inline-block` means that the grid items need their whitespace removing
@@ -112,6 +59,7 @@ $desk-pull:         false!default;
 $use-markup-fix:        true !default;
 
 
+
 /**
  * Define your breakpoints. The first value is the prefix that shall be used for
  * your classes (e.g. `.palm--one-half`), the second value is the media query
@@ -121,60 +69,10 @@ $breakpoints: (
     'palm' '(max-width: 480px)',
     'lap' '(min-width: 481px) and (max-width: 1023px)',
     'portable' '(max-width: 1023px)',
-    'desk' '(min-width: 1024px)'
+    'lap-and-up' '(min-width: 481px)',
+    'desk' '(min-width: 1024px)',
+    'desk-wide' '(min-width: 1200px)'
 ) !default;
-
-
-
-
-/*------------------------------------*\
-    $FONT-SIZES
-\*------------------------------------*/
-/**
- * Font-sizes (in pixels). Refer to relevant sections for their implementations.
- */
-$giga-size:         96px!default;
-$mega-size:         72px!default;
-$kilo-size:         48px!default;
-
-$h1-size:           36px!default; // .alpha
-$h2-size:           30px!default; // .beta
-$h3-size:           24px!default; // .gamma
-$h4-size:           20px!default; // .delta
-$h5-size:           16px!default; // .epsilon
-$h6-size:           14px!default; // .zeta
-
-$milli-size:        12px!default;
-$micro-size:        10px!default;
-
-
-
-
-
-/*------------------------------------*\
-    $QUOTES
-\*------------------------------------*/
-/**
- * English quote marks?
- */
-$english-quotes:    true!default;
-
-/**
- * If you want English quotes then please do not edit these; they’re only here
- * because Sass needs them.
- */
-$open-quote:    null;
-$close-quote:   null;
-
-/**
- * If you need non-English quotes, please alter the following values accordingly:
- */
-@if $english-quotes != true{
-    $open-quote:    \00AB;
-    $close-quote:   \00BB;
-}
-
-
 
 
 
@@ -194,38 +92,25 @@ $brand-round:        4px!default;
 
 
 
-
-
 /*------------------------------------*\
     $OBJECTS AND ABSTRACTIONS
 \*------------------------------------*/
 /**
  * Which objects and abstractions would you like to use?
  */
-$use-grids:         false!default;
-$use-flexbox:       false!default;
-$use-columns:       false!default;
-$use-nav:           false!default;
-$use-options:       false!default;
-$use-pagination:    false!default;
-$use-breadcrumb:    false!default;
-$use-media:         false!default;
-$use-marginalia:    false!default;
-$use-island:        false!default;
-$use-block-list:    false!default;
-$use-matrix:        false!default;
-$use-split:         false!default;
-$use-this-or-this:  false!default;
-$use-link-complex:  false!default;
-$use-flyout:        false!default;
-$use-arrows:        false!default;
-$use-sprite:        false!default;
-$use-icon-text:     false!default;
-$use-beautons:      false!default;
-$use-lozenges:      false!default;
-$use-rules:         false!default;
-$use-stats:         false!default;
-$use-greybox:       false!default;
+$use-grids:         true!default;
+$use-columns:       true!default;
+$use-nav:           true!default;
+$use-pagination:    true!default;
+$use-breadcrumb:    true!default;
+$use-media:         true!default;
+$use-island:        true!default;
+$use-block-list:    true!default;
+$use-split:         true!default;
+$use-lozenges:      true!default;
+$use-rules:         true!default;
+$use-stats:         true!default;
+$use-greybox:       true!default;
 
 
 

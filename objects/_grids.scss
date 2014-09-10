@@ -73,9 +73,7 @@
         display:inline-block;
         padding-left:$base-spacing-unit;
         vertical-align:top;
-        @if $mobile-first {
-            width:100%;
-        }
+        width:100%;
         box-sizing:border-box;
         @if not $use-markup-fix {
             letter-spacing:normal;
