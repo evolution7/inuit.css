@@ -68,44 +68,25 @@
  * SHARED..............Shared declarations
  *
  * MAIN................High-level elements like `html`, `body`, etc.
- * HEADINGS............Double-stranded heading hierarchy
- * PARAGRAPHS..........
- * SMALLPRINT..........Smaller text elements like `small`
- * QUOTES..............
- * CODE................
  * LISTS...............
  * IMAGES..............
  * TABLES..............
- * FORMS...............
  *
  * GRIDS...............Fluid, proportional and nestable grids
- * FLEXBOX.............Crudely emulate flexbox
  * COLUMNS.............CSS3 columns
  * NAV.................A simple abstraction to put a list in horizontal nav mode
- * OPTIONS.............Grouped nav items
  * PAGINATION..........Very stripped back, basic paginator
  * BREADCRUMB..........Simple breadcrumb trail object
  * MEDIA...............Media object
- * MARGINALIA..........Simple marginalia content
  * ISLAND..............Boxed off content
  * BLOCK-LIST..........Blocky lists of content
- * MATRIX..............Gridded lists
  * SPLIT...............A simple split-in-two object
- * THIS-OR-THIS........Options object
- * LINK-COMPLEX........
- * FLYOUT..............Flyout-on-hover object
- * ARROWS..............CSS arrows
- * SPRITE..............Generic spriting element
- * ICON-TEXT...........Icon and text couplings
- * BEAUTONS............Use the beautons micro library
  * LOZENGES............Basic lozenge styles
  * RULES...............Horizontal rules
  * STATS...............Simple stats object
  * GREYBOX.............Wireframing styles
  *
  * WIDTHS..............Width classes for use alongside the grid system etc.
- * PUSH................Push classes for manipulating grids
- * PULL................Pull classes for manipulating grids
  * BRAND...............Helper class to apply brand treatment to elements
  * HELPER..............A series of helper classes to use arbitrarily
  * DEBUG...............Enable to add visual flags for debugging purposes
@@ -156,15 +137,9 @@
  * Base styles; unclassed HTML elements etc.
  */
 @import "base/main",
-        "base/headings",
-        "base/paragraphs",
-        "base/smallprint",
-        "base/quotes",
-        "base/code",
         "base/images",
         "base/lists",
-        "base/tables",
-        "base/forms";
+        "base/tables";
 
 
 
@@ -174,25 +149,14 @@
  * Objects and abstractions
  */
 @import "objects/grids",
-        "objects/flexbox",
         "objects/columns",
         "objects/nav",
-        "objects/options",
         "objects/pagination",
         "objects/breadcrumb",
         "objects/media",
-        "objects/marginalia",
         "objects/island",
         "objects/block-list",
-        "objects/matrix",
         "objects/split",
-        "objects/this-or-this",
-        "objects/link-complex",
-        "objects/flyout",
-        "objects/arrows",
-        "objects/sprite",
-        "objects/icon-text",
-        "objects/beautons",
         "objects/lozenges",
         "objects/rules",
         "objects/stats",
@@ -206,8 +170,6 @@
  * Style trumps; helper and brand classes
  */
 @import "generic/widths",
-        "generic/push",
-        "generic/pull",
         "generic/brand",
         "generic/helper",
         "generic/debug";

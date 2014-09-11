@@ -103,14 +103,11 @@
 
 
 /**
- * Our responsive classes, if we have enabled them.
+ * Our responsive classes.
  */
-@if $responsive {
 
-    @each $breakpoint in $breakpoints {
-        @include grid-media-query(nth($breakpoint, 1)) {
-           @include device-type('#{nth($breakpoint, 1)}--');
-        }
+@each $breakpoint in $breakpoints {
+    @include media-query(nth($breakpoint, 1)) {
+       @include device-type('#{nth($breakpoint, 1)}-');
     }
-
 }
