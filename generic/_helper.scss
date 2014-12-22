@@ -147,6 +147,17 @@
 
 
 /**
+ * Add a left-angled quote to links that imply backwards movement, e.g.:
+ *
+   <a href=# class=back>Return</a>
+ *
+ */
+.back:before{
+    content:"\00AB" "\00A0"!important;
+}
+
+
+/**
  * Apply capital case to an element (usually a `strong`).
  */
 .caps{
@@ -172,13 +183,12 @@
 .visuallyhidden{
     @include accessibility;
 }
-@if $responsive{
-    @each $state in palm, lap, lap-and-up, portable, desk, desk-wide{
-        @include media-query(#{$state}){
-            .accessibility--#{$state},
-            .visuallyhidden--#{$state}{
-                @include accessibility;
-            }
+
+@each $breakpoint in $breakpoints {
+    @include media-query(#{nth($breakpoint, 1)}){
+        .accessibility--#{nth($breakpoint, 1)},
+        .visuallyhidden--#{nth($breakpoint, 1)}{
+            @include accessibility;
         }
     }
 }
